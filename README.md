@@ -16,7 +16,7 @@
   This allows the user to import a Creo Illustrate file as an animation for maintenance or dis/assembly. Within the experience the template prompts the user for input, such as name and notes, which is sent into ThingWorx datatable that can be accessed. The Template comes in two parts, the Vuforia Studio zip file and ThingWorx Datatable file.
 ### Template Entities: 
 
-- [Vuforia Studio zip file](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/TW_Image_Training_Demo.zip)
+- [Vuforia Studio zip file](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/)
 
 - [ThingWorx Data Table](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/TW_Image_Training_Demo.zip)
 
