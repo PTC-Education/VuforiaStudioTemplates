@@ -42,5 +42,3 @@
 
 ## Machine Learning Template
 
-
-![dicetower](Resources/Keti2.jpg)
