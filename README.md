@@ -18,7 +18,7 @@
 
 - [Vuforia Studio zip file](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/Maintenance_Template.zip)
 
-- [ThingWorx Data Table](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/TW_Image_Training_Demo.zip)
+- [ThingWorx Data Table](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/Things_Maintenance_DataTable_Template.xml)
 
 ### Getting Started
 
