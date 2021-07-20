@@ -18,7 +18,7 @@
 
 - [Vuforia Studio zip file](https://github.com/PTC-Education/VuforiaStudioTemplates/files/6845625/Maintenance_Assembly_Template.zip)
 
-- [ThingWorx Data Table](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/Things_Maintenance_DataTable_Template.xml)- 
+- [ThingWorx Data Table](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/Things_Maintenance_Assembly_Template.xml)
 
 ### Getting Started
 
