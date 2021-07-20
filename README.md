@@ -17,8 +17,11 @@
 ### Template Entities: 
 
 - [Vuforia Studio zip file](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/Maintenance_Template.zip)
+- [Maintenance_Assembly_Template.zip](https://github.com/PTC-Education/VuforiaStudioTemplates/files/6845625/Maintenance_Assembly_Template.zip)
+
 
 - [ThingWorx Data Table](https://github.com/PTC-Education/VuforiaStudioTemplates/blob/main/Things_Maintenance_DataTable_Template.xml)
+- 
 
 ### Getting Started
 
@@ -28,7 +31,7 @@
 
 <img width="168" alt="resourcesScreenShot" src="https://user-images.githubusercontent.com/78899336/124706357-5535c980-deb4-11eb-9135-3a8ab9980dd6.PNG">
 <img width="160" alt="chooseSequenceScreenshot" src="https://user-images.githubusercontent.com/78899336/124706363-58c95080-deb4-11eb-8b14-b85f09ff8283.PNG">
-
+ 
 
 - Open up your ThingWorx instance and import the ThingWorx Data Table entities. Make sure the permissions are turned to public access. 
 - Go back into Vuforia Studio and make sure your instance matches you ThingWorx instance. 
