@@ -1,0 +1,34 @@
+import requests
+import json
+import base64
+from google.colab import files
+
+url = "https://pp-2101111403aw.portal.ptc.io/Thingworx/Things/Machine_Learning_DataTable/Services/SearchDataTableEntries" #Change Thingworx URL to local instance
+
+maintenancePicture = "MachineLearning"
+
+appKey = ''#Create an app key for DataTable and paste it here
+payload=json.dumps({"searchExpression":"Jess"})  #insert name input from Vuforia Studio Experience
+headers = {
+  'appKey': appKey,
+  'Content-Type': 'application/json',
+  'accept': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+print(response)
+
+FullResponse = json.dumps(response.json(), indent=4, sort_keys=True)
+print(FullResponse)
+
+numberOfImg = len(response.json()['rows'])
+
+for i in range(numberOfImg):
+  Img = response.json()['rows'][i]['Images']
+
+  filename = maintenancePicture+str(i)+'.jpg'
+
+  binary = base64.b64decode(Img)
+  with open(filename, 'wb') as f:
+    f.write(binary)
+  files.download(filename)
