@@ -46,4 +46,8 @@
   This template allows for an author to simulate a vision system by connecting Vuforia Studio to Microsoft Lobe through ThingWorx and Jupyter Notebooks. Microsoft Lobe is a machine learning program which allows a user to take pictures to train and deploy a model. This is especially useful in AR instructions to validate users on whether the part they are working on looks correct, particularly when the author does not have access to CAD models to use for model tracking. The author of the experience can train the model to the correct orientation, and then users of the experience can use that model to validate their work. 
   
 ### Template Entities
-- 
+- [Vuforia Studio zip file]
+- [ThingWorx DataTable file]
+- [Jupyter code for training model]
+- [Jupyter code for deploying model]
+- [Google Colab code for prediction]
