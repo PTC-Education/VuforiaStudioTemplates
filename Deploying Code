@@ -1,0 +1,59 @@
+import base64
+import requests
+
+# # Save string of image file path below
+# img_filepath = "Keti2.jpg"
+
+# # Create base64 encoded string
+# with open(img_filepath, "rb") as f:
+#     image_string = base64.b64encode(f.read()).decode("utf-8")
+
+import json
+
+url = "https://pp-2101111403aw.portal.ptc.io/Thingworx/Things/JS_Model_Prediction_Thing/Properties/Image" 
+#change URL to local ThingWorx Instance. 
+#make sure the 
+
+
+appKey = '7082f570-92e1-461b-b451-11c8a6009cf1' #Create appkey in Thingworx for the imported Machine Learning DataTable and change here
+payload={}
+headers = {
+  'appKey': appKey,
+  'Content-Type': 'application/json',
+  'accept': 'application/json'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+FullResponse = json.dumps(response.json(), indent=4, sort_keys=True)
+imageString = response.json()["rows"][0]["Image"]
+
+
+
+# Get response from POST request
+response = requests.post(
+    url="http://localhost:38101/v1/predict/c66dc7f8-708b-4d86-9ec6-059b634fa2c9",
+    json={"image": imageString},
+)
+data = response.json()
+top_prediction = data["predictions"][0]
+
+# Print the top predicted label and its confidence
+print(data["predictions"][0]["label"])
+
+
+propName = 'Prediction'
+value = top_prediction["label"]
+url = "https://pp-2101111403aw.portal.ptc.io/Thingworx/Things/JS_Model_Prediction_Thing/Properties/"+propName #end of URL should have the property name
+
+
+payload=json.dumps({"Prediction":data["predictions"][0]["label"]})
+headers = {
+  'appKey': appKey,
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("PUT", url, headers=headers, data=payload)
+
+print(response)
+
